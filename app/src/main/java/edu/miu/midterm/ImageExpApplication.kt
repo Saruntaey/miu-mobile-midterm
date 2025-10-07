@@ -1,4 +1,7 @@
 package edu.miu.midterm
 
-class ImageExpApplication {
-}
+import android.app.Application
+import dagger.hilt.android.HiltAndroidApp
+
+@HiltAndroidApp
+class ImageExpApplication: Application()

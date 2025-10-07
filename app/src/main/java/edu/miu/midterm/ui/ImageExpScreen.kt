@@ -19,14 +19,17 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.viewmodel.compose.viewModel
 import edu.miu.midterm.data.ImageRepositoryImpl
 
 @Composable
 fun ImageExpScreen(modifier: Modifier = Modifier) {
-    val imageExpViewModel: ImageExpViewModel = viewModel{
-        ImageExpViewModel(ImageRepositoryImpl())
-    }
+//    val imageExpViewModel: ImageExpViewModel = viewModel{
+//        ImageExpViewModel(ImageRepositoryImpl())
+//    }
+
+    val imageExpViewModel: ImageExpViewModel = hiltViewModel()
     val item by imageExpViewModel.uiState.collectAsState()
 
     Scaffold { innerPadding ->

@@ -11,16 +11,18 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import dagger.hilt.android.AndroidEntryPoint
+import edu.miu.midterm.ui.ImageExpScreen
 import edu.miu.midterm.ui.theme.MidtermTheme
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
             MidtermTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                }
+                ImageExpScreen()
             }
         }
     }
