@@ -46,6 +46,7 @@ fun ImageExpScreen(modifier: Modifier = Modifier) {
                 painter = painterResource(id = item.item.image),
                 contentDescription = stringResource(id = item.item.title)
             )
+            Text(text = stringResource(id = item.item.title))
             Button(onClick = { imageExpViewModel.getNext() }) {
                 Text(text = "Next")
             }
